@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.calculator {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: white;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 2em;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons, .scientific {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    transition: opacity 0.5s ease;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5aa1f3;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #89b6e7;
+    transform: scale(1.05);
+}
+
+.mode-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    gap: 85px;
+    
+   
+}
+
+.scientific {
+    display: none;
+    margin-top: 10px; /* Hide scientific buttons by default */
+    
+}
+
+.scientific.active {
+    display: grid; /* Show scientific buttons when active */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .calculator {
+    background-color: #444;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border-color: #555;
+}
+
+body.dark-mode #display {
+    background-color: #555;
+    color: white;
+    border-color: #666;
+}
+
+body.dark-mode button {
+    background-color: #555;
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background-color: #777;
+}
+
